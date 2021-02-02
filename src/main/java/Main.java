@@ -1,16 +1,33 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  * @author Alexander Krasnov
  * @see #calculate() which has been realized with switch-case construction
+ * @see #maxWordLength() which has been realized with ArrayList
  */
 
 public class Main {
     public static void main(String[] args) {
-        calculate();
+        choiceTheMethod();
+    }
+    public static void choiceTheMethod(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("To use calculator insert 1\nFor finding word with max length insert 2");
+        String choice = scanner.next();
+        switch (choice) {
+            case ("1"):
+                calculate();
+                scanner.close();
+                break;
+            case ("2"):
+                maxWordLength();
+                scanner.close();
+                break;
+        }
     }
 
-    public static void calculate() {
+    private static void calculate() {
         Scanner scanner = new Scanner(System.in);
         double result;
         System.out.println("Insert first number: ");
@@ -44,6 +61,26 @@ public class Main {
                 scanner.close();
                 break;
         }
+    }
+
+    private static void maxWordLength() {
+        Scanner scanner = new Scanner(System.in);
+        String maxLengthWord = "";
+        int length = 0;
+        System.out.println("Insert length of array");
+        int arrayLength = scanner.nextInt();
+        ArrayList<String> words = new ArrayList<>(arrayLength);
+        for (int i = 0; i < arrayLength; i++) {
+            System.out.println("Insert your word");
+            words.add(scanner.next());
+        }
+        for (String s: words) {
+            if (s.length() > length) {
+                maxLengthWord = s;
+                length = s.length();
+            }
+        }
+        System.out.printf("Max length in array has word '%s' (%d) symbols",maxLengthWord,length);
     }
 }
 
