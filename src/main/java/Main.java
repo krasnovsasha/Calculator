@@ -3,7 +3,8 @@ import java.util.Scanner;
 
 /**
  * @author Alexander Krasnov
- * @see #calculate() which has been realized with switch-case construction
+ * @see #choiceTheMethod() which has been realized with switch-case construction Java 14 style
+ * @see #calculate() which has been realized with switch-case construction Java 14 style
  * @see #maxWordLength() which has been realized with ArrayList
  */
 
@@ -11,19 +12,20 @@ public class Main {
     public static void main(String[] args) {
         choiceTheMethod();
     }
-    public static void choiceTheMethod(){
+
+    public static void choiceTheMethod() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("To use calculator insert 1\nFor finding word with max length insert 2");
         String choice = scanner.next();
         switch (choice) {
-            case ("1"):
+            case ("1") -> {
                 calculate();
                 scanner.close();
-                break;
-            case ("2"):
+            }
+            case ("2") -> {
                 maxWordLength();
                 scanner.close();
-                break;
+            }
         }
     }
 
@@ -40,26 +42,26 @@ public class Main {
         System.out.println("For calculate multiplication of " + number1 + " and " + number2 + " insert *");
         String choice = scanner.next();
         switch (choice) {
-            case ("+"):
+            case ("+") -> {
                 result = number1 + number2;
                 System.out.printf("Sum " + number1 + " + " + number2 + " is %.4f", result);
                 scanner.close();
-                break;
-            case ("-"):
+            }
+            case ("-") -> {
                 result = number1 - number2;
                 System.out.printf("Result of subtraction " + number1 + " and " + number2 + " is %.4f", result);
                 scanner.close();
-                break;
-            case ("*"):
+            }
+            case ("*") -> {
                 result = number1 * number2;
                 System.out.printf("Result of multiplication " + number1 + " and " + number2 + " is %.4f", result);
                 scanner.close();
-                break;
-            case ("/"):
+            }
+            case ("/") -> {
                 result = number1 / number2;
                 System.out.printf("Result of division " + number1 + " and " + number2 + " is %.4f", result);
                 scanner.close();
-                break;
+            }
         }
     }
 
@@ -74,13 +76,13 @@ public class Main {
             System.out.println("Insert your word");
             words.add(scanner.next());
         }
-        for (String s: words) {
+        for (String s : words) {
             if (s.length() > length) {
                 maxLengthWord = s;
                 length = s.length();
             }
         }
-        System.out.printf("Max length in array has word '%s' (%d) symbols",maxLengthWord,length);
+        System.out.printf("Max length in array has word '%s' (%d) symbols", maxLengthWord, length);
     }
 }
 
