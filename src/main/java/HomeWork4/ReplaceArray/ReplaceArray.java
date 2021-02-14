@@ -1,9 +1,9 @@
-package HomeWork4;
+package HomeWork4.ReplaceArray;
 
 /**
  * @author Alexander Krasnov
  * @see #createArray() which create a new array with length 20 and random elements (numbers -10 up to +10 )
- * @see #replaceMinMax(int[]) which swaps the max negative array element and min positive
+ * @see #replaceMinMax(int[]) which swaps the max negative array element and the min positive
  */
 public class ReplaceArray {
     public ReplaceArray(){
