@@ -6,6 +6,11 @@ package HomeWork5.operations;
 public class OperationBase {
     protected double number1;
     protected double number2;
+    protected double result;
+
+    public double getNumber2() {
+        return number2;
+    }
 
     public void setNumber1(double number1) {
         this.number1 = number1;
@@ -16,7 +21,6 @@ public class OperationBase {
     }
 
     public double getResult() {
-        double result = 0;
         return result;
     }
 }
