@@ -1,8 +1,7 @@
 package smokeTests;
 
 import HomeWork5.operations.*;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
 
 /**
  * @author Alexander Krasnov
