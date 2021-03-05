@@ -1,3 +1,5 @@
+package parametrizedTests;
+
 import HomeWork5.operations.OperationBase;
 import HomeWork5.operations.Sum;
 import org.junit.Assert;
