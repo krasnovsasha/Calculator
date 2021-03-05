@@ -3,7 +3,7 @@ package HomeWork5.operations;
 /**
  * @author Alexander Krasnov
  */
-public class OperationBase {
+public abstract class OperationBase {
     protected double number1;
     protected double number2;
     protected double result;
